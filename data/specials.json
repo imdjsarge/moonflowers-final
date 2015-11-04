@@ -1,0 +1,13 @@
+{
+  "specials" :
+    [
+      {
+        "key" : "bake15off",
+        "description" : "Bakery Goods 15% off!"
+      },
+      {
+        "key" : "dblmintmocha",
+        "description" : "Drink of the week: Double Mint Mocha $3"
+      }
+    ]
+}
