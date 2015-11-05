@@ -1,6 +1,18 @@
 (function () {
+    
+    // Add code to get the menu data using Ajax
 
-
+$.ajax({
+                type: "GET",
+                 url: "data/menu.json",
+                 dataType: "json",
+                 success: function(buildMenu) {
+                     console.log(coffeeShopApp.specials)
+                 },
+                 error: function() {
+                     alert ("an ajax error occured.");
+                 }                             
+             });
 
     var coffeeShopApp = {
         buildMenu: function (data) {
@@ -14,24 +26,22 @@
             
             
 
-            // Add code to get the menu data using Ajax
-             $.ajax({
-                type: "GET",
-                 url: "data/menu.json",
-                 dataType: "json",
-                 success: function(buildMenu) {
-                     console.log(coffeeShopApp.buildMenu);
-                 },
-                 error: function() {
-                     alert ("an ajax error occured.");
-                 }                             
-             });
+            
+             
              
             // & add the menu items to the appropriate section
             // An example:
             // <li><span class="menu-item">Cappuccino $4.00</span><img src="images/cappuccino.jpg"></li>
 
-        }
+        },
+        
+            specials : function () {
+            
+            var specials = ("#specials");
+            $("<p>").text("Bakery Goods 15% off!").insertAfter("h2");
+            $("<p>").text("Drink of the week: Double Mint Mocha $3").insertAfter("h2")
+    
+            },
 
       
 
@@ -50,7 +60,11 @@
     // Add code for the form submit button it should validate the form
     
       // Add a new method to add the weekly specials
-    // $("<p>").text("Bakery Goods 15% off!").insertAfter("#specials");
-       // $("<p>").text("Drink of the week: Double Mint Mocha $3").insertAfter("#specials");
+    coffeeShopApp.specials();
+
+    
+    
+    
+
 
 }());
