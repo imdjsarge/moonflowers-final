@@ -38,8 +38,8 @@ $.ajax({
             specials : function () {
             
             var specials = ("#specials");
-            $("<p>").text("Bakery Goods 15% off!").insertAfter("h2");
-            $("<p>").text("Drink of the week: Double Mint Mocha $3").insertAfter("h2")
+            $("<p>").text("Bakery Goods 15% off!").insertAfter(specials);
+            $("<p>").text("Drink of the week: Double Mint Mocha $3").insertAfter(specials)
     
             },
 
